@@ -1,0 +1,58 @@
+next():
+====
+      i) String type 
+      ii) It reads input until it encounters a whitespaces(space,newline,tab)
+      iii) This means it will only capture one "word" or token at a time,and it will not include spaces
+      iv) Used for reading words or strings
+
+Example:
+=======
+import java.util.Scanner;
+public class ScannerNextExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String word = scanner.next();
+        System.out.println("You entered: " + word);
+        scanner.close();
+    }
+}
+
+nextInt():
+======
+	i) Returns a int
+	ii)It reads only an integer and stops once it encouters any non-numeric character(eg.space,leter,etc)
+	iii)Used for reading numeric input
+
+Example:
+=======
+import java.util.Scanner;
+public class ScannerNextIntExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
+        System.out.println("You entered: " + number);
+        scanner.close();
+    }
+}
+
+
+nextFloat()
+========
+	i) nextFloat() reads the next token in the input and converts it into a float type value
+	ii)nextFloat() expects that the user will input a valid floating( like non-numeric value),
+	it will thrown an (InputMismatchException)
+
+Example
+=======
+import java.util.Scanner;
+public class ScannerNextFloatExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a floating-point number: ");
+        float number = scanner.nextFloat();
+        System.out.println("You entered: " + number);
+        scanner.close();
+    }
+}
