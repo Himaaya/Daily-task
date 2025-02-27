@@ -1,0 +1,50 @@
+public class Employee {
+    
+    private int id;
+    private double salary;
+    
+    
+    private static final double MIN_SALARY = 3000.0;
+    
+     Employee with id and salary
+    public Employee(int id, double salary) {
+        this.id = id;
+        setSalary(salary);  
+    }
+    
+    
+    public double getSalary() {
+        return salary;
+    }
+    
+    with validation
+    public void setSalary(double salary) {
+        if (salary >= MIN_SALARY) {
+            this.salary = salary;
+        } else {
+            System.out.println("Salary cannot be set below the minimum threshold of " + MIN_SALARY);
+        }
+    }
+    
+    // Getter for the id
+    public int getId() {
+        return id;
+    }
+    
+    // Setter for the id (optional, as id is usually set in the constructor)
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public static void main(String[] args) {
+        // Create an Employee object
+        Employee emp = new Employee(1, 3500.0);
+        
+        // Display the salary
+        System.out.println("Employee ID: " + emp.getId());
+        System.out.println("Employee Salary: " + emp.getSalary());
+        
+        // Try setting a salary below the threshold
+        emp.setSalary(2500.0); // Should print a validation message
+    }
+}
