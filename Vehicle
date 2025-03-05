@@ -1,0 +1,28 @@
+class Vehicle {     
+    public void start() {         
+        System.out.println("Vehicle");     
+    } 
+}
+
+class Car extends Vehicle {     
+    @Override     
+    public void start() {         
+        System.out.println("Car");     
+    } 
+}
+
+class Bike extends Vehicle {   
+    @Override     
+    public void start() {         
+        System.out.println("Bike");     
+    } 
+}
+
+public class Main {     
+    public static void main(String[] args) {         
+        Vehicle vehicle1 = new Car();           
+        Vehicle vehicle2 = new Bike();         
+        vehicle1.start();         
+        vehicle2.start();     
+    } 
+}
